@@ -1,0 +1,27 @@
+---
+# Main css
+---
+
+@import "variables";
+
+body {
+  margin: 0;
+  background: $gruv_0;
+  color: $gruv_15;
+	font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	letter-spacing: .01em;
+}
+
+#top {
+  background: $gruv_15;
+  color: $gruv_0;
+}
+
+.container {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+blockquote {
+}

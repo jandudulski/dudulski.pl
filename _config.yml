@@ -1,3 +1,3 @@
 exclude:
-  - README.md
   - Gemfile*
+  - README.md
