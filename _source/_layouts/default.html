@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <header class="p2 container">
+      <a href="/">back</a>
+    </header>
+
+    <section id="main" class="px2 container">
+      <h1>{{ page.title }}</h1>
+
+      {{ content }}
+    </section>
+
+    {% include footer.html %}
+  </body>
+</html>
