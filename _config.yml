@@ -5,6 +5,9 @@ timezone: Europe/Warsaw
 
 strict_front_matter: true
 
+include:
+  - .well-known
+
 permalink: pretty
 
 defaults:

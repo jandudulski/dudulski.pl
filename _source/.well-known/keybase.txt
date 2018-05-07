@@ -1,0 +1,60 @@
+==================================================================
+https://keybase.io/jandudulski
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://dudulski.pl
+  * I am jandudulski (https://keybase.io/jandudulski) on keybase.
+  * I have a public key ASCMUj1umlk4cmxYS3AMLvC1WCW1UurVNvZwhngx7IswVAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101954fbdcd1789ff8558a6efc3e2aa8759d3c7eb971884e1dd55ea04b697c630550a",
+      "host": "keybase.io",
+      "kid": "01208c523d6e9a5938726c584b700c2ef0b55825b552ead536f670867831ec8b30540a",
+      "uid": "7d1bb333001e16ed5c990334100bde19",
+      "username": "jandudulski"
+    },
+    "merkle_root": {
+      "ctime": 1525706432,
+      "hash": "abab3905c703aa5248f74dcc98a39b598410441f00c92fcff6de48eb4c54d8ed37b4203b67ebbc61c5205adb163e02db4d25bba3f57d
+8e4de081427f6ac7e74f",
+      "hash_meta": "17f3e181d5ddb5915c267452dc4412edbb2c57570a05d00cfca0420c88c75d23",
+      "seqno": 2496795
+    },
+    "service": {
+      "entropy": "c7kKRwCfmTqGLaviD0xjNHeB",
+      "hostname": "dudulski.pl",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.47"
+  },
+  "ctime": 1525706456,
+  "expire_in": 504576000,
+  "prev": "c72416fe9ab182b216d9cae570641c5a4c5b0763ba22b270cb929ae2e6c8df8a",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgjFI9bppZOHJsWEtwDC7wtVgltVLq1Tb2cIZ4MeyLMFQKp3BheWxvYWTESpcCBcQgxyQW/pqxgrI
+W2crlcGQcWkxbB2O6IrJwy5Ka4ubI34rEIO9PJcaleaFG/g93vVJws65Ag5llUyUZPy6rAqCAHcqfAgHCo3NpZ8RAIzN2SnPyKP5o/wxU8KkQQPYSmkUbWwpfyE
+yU3k/CIDLBoeobCTQLBHBUOa8hd1K+N2uqSYlIuE1H1y/55wukBKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIBXGEPkBW8kufiwmB245qyYHyHqIwyf+f
+0s1InsL/XiCo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jandudulski
+
+==================================================================
