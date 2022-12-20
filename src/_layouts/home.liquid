@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<header class="container">
+  <div class="py2">
+    <blockquote class="right-align">
+      <i class="fa fa-quote-right left h1" aria-hidden="true"></i>
+      <p>For myself, I am an optimist &mdash; it does not seem to be much use being anything else.</p>
+      <cite>Winston Leonard Spencer Churchill</cite>
+    </blockquote>
+
+    <blockquote class="right-align">
+      <i class="fa fa-quote-right left h1" aria-hidden="true"></i>
+      <p>Pass on what you have learned. Strength. Mastery. But weakness, folly, failure also. Yes, failure most of all. The greatest teacher, failure is. Luke, we are what they grow beyond. That is the true burden of all masters.</p>
+      <cite>Master Yoda</cite>
+    </blockquote>
+  </div>
+</header>
+
+<main id="main" class="px2 container">
+  <h1>{{ page.title }}</h1>
+
+  {{ content }}
+</main>
+
+{% render "footer", links: site.data.links %}

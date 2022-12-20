@@ -1,0 +1,11 @@
+---
+- url: "https://dudulski.pl/gpg.txt"
+  icon: "fas fa-user-secret"
+- url: "https://github.com/jandudulski"
+  icon: "fab fa-github"
+- url: "https://twitter.com/yanoo_"
+  icon: "fab fa-twitter"
+- url: "https://ruby.social/@jandudulski"
+  icon: "fab fa-mastodon"
+- url: "https://www.linkedin.com/in/jandudulski/"
+  icon: "fab fa-linkedin"
