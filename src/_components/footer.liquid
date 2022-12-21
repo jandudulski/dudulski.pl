@@ -1,6 +1,6 @@
 <footer class="p2">
   {% for link in links %}
-  <a href="{{ link.url }}"><i class="{{ link.icon }}" aria-hidden="true"></i></a>
+    <a href="{{ link.url }}"{% if link.rel %} rel="{{ link.rel }}"{% endif %}><i class="{{ link.icon }}" aria-hidden="true"></i></a>
   {% endfor %}
   Horses thanks to <a href="https://render.com">Render</a> ❤
 </footer>
