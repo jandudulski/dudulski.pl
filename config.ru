@@ -1,7 +1,7 @@
-# This file is used by Rack-based servers during the Bridgetown boot process.
+# frozen_string_literal: true
 
-require "bridgetown-core/rack/boot"
+require_relative "app"
 
-Bridgetown::Rack.boot
+app = App.freeze
 
-run RodaApp.freeze.app # see server/roda_app.rb
+run app
