@@ -3,3 +3,11 @@ ruby = "3.4.7"
 
 [tasks.server]
 run = "bundle exec puma"
+
+[tasks.build]
+run = "bin/static-build"
+alias = "b"
+
+[tasks.clean]
+run = "rm -rf build"
+alias = "c"
