@@ -1,6 +1,6 @@
 ---
 title: "We broke the internet. We can still fix it"
-url: "https://dudulski.pl/2025/10/15/fix-the-internet"
+url: "/2025/10/15/fix-the-internet"
 timestamp: "2025-10-15 19:25:00 +0200"
 ---
 Have you ever rotated a mobile screen while reading a post on LinkedIn and lost it? Have you ever closed a social media post because content wasn't available to read without an account? Have you ever had a hard time following the Twitter/X post spread into a thread? Have you ever missed a post of someone who you follow, but it never showed up on your feed? Have you ever struggled to find a post that you didn't have time to read when it showed up? Have you ever been trying to find a specific past post on any of the social platforms?

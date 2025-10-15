@@ -216,7 +216,7 @@ class App < Roda
 
         Entry.glob("*").each do |entry|
           maker.items.new_item do |item|
-            item.link = entry.url
+            item.link = "https://dudulski.pl#{entry.url}"
             item.title = entry.title
             item.updated = entry.timestamp
             item.content.type = "xhtml"
