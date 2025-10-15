@@ -207,15 +207,20 @@ class App < Roda
       RSS::Maker.make("atom") do |maker|
         maker.channel.author = "Jan Dudulski"
         maker.channel.updated = Time.now
-        maker.channel.about = "Personal site by Jan Dudulski"
+        maker.channel.id = "https://dudulski.pl"
+        maker.channel.links.new_link.tap do |link|
+          link.href = "https://dudulski.pl/feed.xml"
+          link.rel = "self"
+        end
         maker.channel.title = "dudulski.pl"
 
         Entry.glob("*").each do |entry|
           maker.items.new_item do |item|
-            item.link = "https://dudulski.pl/#{entry.url}"
+            item.link = entry.url
             item.title = entry.title
             item.updated = entry.timestamp
-            item.content.content = Kramdown::Document.new(entry.content, input: "GFM").to_html
+            item.content.type = "xhtml"
+            item.content.xml = Kramdown::Document.new(entry.content, input: "GFM").to_html
           end
         end
       end.to_s
