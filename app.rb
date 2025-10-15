@@ -207,7 +207,7 @@ class App < Roda
       RSS::Maker.make("atom") do |maker|
         maker.channel.author = "Jan Dudulski"
         maker.channel.updated = Time.now
-        maker.channel.id = "https://dudulski.pl"
+        maker.channel.id = "https://dudulski.pl/"
         maker.channel.links.new_link.tap do |link|
           link.href = "https://dudulski.pl/feed.xml"
           link.rel = "self"

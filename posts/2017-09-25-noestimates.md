@@ -1,6 +1,6 @@
 ---
 title: "NoEstimates"
-url: "/2017/09/25/noestimates"
+url: "https://dudulski.pl/2017/09/25/noestimates"
 timestamp: "2017-09-25 22:50:00 +0200"
 ---
 
