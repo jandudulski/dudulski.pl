@@ -2,12 +2,9 @@ services:
   - type: web
     name: dudulski.pl
     env: static
-    buildCommand: bin/bridgetown deploy
-    staticPublishPath: ./output
+    buildCommand: bin/static-build
+    staticPublishPath: ./build
     pullRequestPreviewsEnabled: true
-    envVars:
-      - key: BRIDGETOWN_ENV
-        value: production
     headers:
       - path: /*
         name: X-Frame-Options
