@@ -124,10 +124,10 @@ class HomeView < Phlex::HTML
 
       main do
         h1 { "Entires" }
-        @entries.each do |entry|
+        @entries.reverse_each do |entry|
           h2 do
             plain(entry.formatted_date)
-            a(href: "/2017/09/25/noestimates") { entry.title }
+            a(href: entry.url) { entry.title }
           end
         end
       end
@@ -171,7 +171,7 @@ class EntryView < Phlex::HTML
 end
 
 Entry = Decant.define(dir: "posts", ext: "md") do
-  frontmatter :title, :timestamp
+  frontmatter :title, :url, :timestamp
 
   def formatted_date
     date = Time.parse(timestamp)
@@ -212,7 +212,7 @@ class App < Roda
 
         Entry.glob("*").each do |entry|
           maker.items.new_item do |item|
-            item.link = "https://dudulski.pl/#{entry.slug}"
+            item.link = "https://dudulski.pl/#{entry.url}"
             item.title = entry.title
             item.updated = entry.timestamp
             item.content.content = Kramdown::Document.new(entry.content, input: "GFM").to_html
