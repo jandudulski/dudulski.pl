@@ -170,7 +170,7 @@ class EntryView < Phlex::HTML
   end
 end
 
-Entry = Decant.define(dir: "src/_posts", ext: "md") do
+Entry = Decant.define(dir: "posts", ext: "md") do
   frontmatter :title, :timestamp
 
   def formatted_date
