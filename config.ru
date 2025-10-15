@@ -2,6 +2,4 @@
 
 require_relative "app"
 
-app = App.freeze
-
-run app
+run App.freeze.app
