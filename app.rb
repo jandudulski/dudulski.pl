@@ -123,7 +123,7 @@ class HomeView < Phlex::HTML
       end
 
       main do
-        h1 { "Entires" }
+        h1 { "Entries" }
         @entries.reverse_each do |entry|
           h2 do
             plain(entry.formatted_date)
