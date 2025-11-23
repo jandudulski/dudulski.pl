@@ -9,6 +9,5 @@ end
 Parklife.application.routes do
   root crawl: true
 
-  get "/feed.xml"
   get "/404.html"
 end
