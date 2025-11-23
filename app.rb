@@ -98,6 +98,7 @@ class Layout < Phlex::HTML
             a(href: "https://bsky.app/profile/jan.dudulski.pl", rel: "me") { "Bluesky" }
             a(href: "https://ruby.social/@jandudulski", rel: "me") { "Mastodon" }
             a(href: "https://www.linkedin.com/in/jandudulski/", rel: "me") { "Linkedin" }
+            a(href: "/rss.xml") { "RSS" }
           end
 
           if @home
