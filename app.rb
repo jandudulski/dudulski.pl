@@ -4,8 +4,9 @@ require "bundler/setup"
 Bundler.require(:default)
 
 class Layout < Phlex::HTML
-  def initialize(title:)
+  def initialize(title:, home: false)
     @title = title
+    @home = home
   end
 
   def view_template
@@ -33,6 +34,46 @@ class Layout < Phlex::HTML
                   content: "∎";
               }
           }
+          header {
+              h1 > a {
+                  color: #000;
+                  text-decoration: none;
+              }
+
+              nav {
+                  border-width: 1px 0;
+                  border-style: solid;
+                  border-color: #666;
+                  padding: 0.5em 0;
+
+                  display: flex;
+                  flex-direction: row;
+                  gap: 1em;
+
+                  a {
+                      text-decoration: none;
+                  }
+                  a:visited { color: #3300FF; }
+              }
+          }
+          main {
+            li {
+                time::before {
+                    content: "[";
+                }
+                time::after {
+                    content: "]";
+                }
+                time {
+                    margin-right: 0.5em;
+                    color: #666;
+                }
+                a { text-decoration: none; }
+                a:hover { text-decoration: underline; }
+
+                line-height: 1.5em;
+            }
+          }
           body > footer::before {
               text-align: center;
               content: "❦";
@@ -46,36 +87,35 @@ class Layout < Phlex::HTML
         title { @title }
       end
       body do
+        header do
+          h1 do
+            a(href: "/") { "Jan Dudulski" }
+          end
+
+          nav do
+            a(href: "/gpg.txt") { "GNU Privacy Guard" }
+            a(href: "https://github.com/jandudulski", rel: "me") { "GitHub" }
+            a(href: "https://bsky.app/profile/jan.dudulski.pl", rel: "me") { "Bluesky" }
+            a(href: "https://ruby.social/@jandudulski", rel: "me") { "Mastodon" }
+            a(href: "https://www.linkedin.com/in/jandudulski/", rel: "me") { "Linkedin" }
+          end
+
+          if @home
+            blockquote do
+              p { safe("For myself, I am an optimist &mdash; it does not seem to be much use being anything else.") }
+            end
+            b { safe("&mdash; Winston Leonard Spencer Churchill") }
+
+            blockquote do
+              p { "Pass on what you have learned. Strength. Mastery. But weakness, folly, failure also. Yes, failure most of all. The greatest teacher, failure is. Luke, we are what they grow beyond. That is the true burden of all masters." }
+            end
+            b { safe("&mdash; Master Yoda") }
+          end
+        end
+
         yield
 
         footer do
-          dl do
-            dt { "GNU Privacy Guard" }
-            dd do
-              a(href: "/gpg.txt") { "Public gpg key" }
-            end
-
-            dt { "GitHub" }
-            dd do
-              a(href: "https://github.com/jandudulski", rel: "me") { "github.com/jandudulski" }
-            end
-
-            dt { "Bluesky" }
-            dd do
-              a(href: "https://bsky.app/profile/jan.dudulski.pl", rel: "me") { "@jan.dudulski.pl" }
-            end
-
-            dt { "Mastodon" }
-            dd do
-              a(href: "https://ruby.social/@jandudulski", rel: "me") { "@jandudulski@ruby.social" }
-            end
-
-            dt { "Linkedin" }
-            dd do
-              a(href: "https://www.linkedin.com/in/jandudulski/", rel: "me") { "linkedin.com/in/jandudulski" }
-            end
-          end
-
           p do
             plain("Horses thanks to ")
             a(href: "https://render.com") { "Render" }
@@ -104,30 +144,20 @@ end
 
 class HomeView < Phlex::HTML
   def initialize(entries:)
-    @layout = Layout.new(title: "~dudulski")
+    @layout = Layout.new(title: "~dudulski", home: true)
     @entries = entries
   end
 
   def view_template
     render @layout do
-      header do
-        blockquote do
-          p { safe("For myself, I am an optimist &mdash; it does not seem to be much use being anything else.") }
-        end
-        b { safe("&mdash; Winston Leonard Spencer Churchill") }
-
-        blockquote do
-          p { "Pass on what you have learned. Strength. Mastery. But weakness, folly, failure also. Yes, failure most of all. The greatest teacher, failure is. Luke, we are what they grow beyond. That is the true burden of all masters." }
-        end
-        b { safe("&mdash; Master Yoda") }
-      end
-
       main do
-        h1 { "Entires" }
-        @entries.reverse_each do |entry|
-          h2 do
-            plain(entry.formatted_date)
-            a(href: entry.url) { entry.title }
+        h1 { "Entries" }
+        ul do
+          @entries.reverse_each do |entry|
+            li do
+              time { entry.formatted_date }
+              a(href: entry.url) { entry.title }
+            end
           end
         end
       end
@@ -143,10 +173,6 @@ class EntryView < Phlex::HTML
 
   def view_template
     render @layout do
-      header do
-        a(href: "/") { "Back" }
-      end
-
       article do
         header do
           h1 { @entry.title }
