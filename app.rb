@@ -21,6 +21,9 @@ class Layout < Phlex::HTML
 
         style do
           safe(<<~CSS)
+          body {
+              font-family: JetBrains Mono, monospace;
+          }
           blockquote {
               p::before {
                   content: "“";
