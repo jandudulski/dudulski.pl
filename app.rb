@@ -229,7 +229,7 @@ class App < Roda
     end
 
     r.get Integer, Integer, Integer, String do |year, month, day, slug|
-      entry = Entry.find("#{year}-#{"%02d" % month}-#{day}-#{slug}")
+      entry = Entry.find("#{year}-#{"%02d" % month}-#{"%02d" % day}-#{slug}")
       EntryView.new(entry: entry).call
     end
 
