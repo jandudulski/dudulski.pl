@@ -157,7 +157,7 @@ My personal greatest benefit of events is the influence on the way I think about
 
 Not to mention that now you have an audit log for free.
 
-It’s true, that full implementation of Domain-Driven Design with [CQRS])(https://udidahan.com/2009/12/09/clarified-cqrs/) and Event Sourcing is not simple. It requires knowledge, a lot of learning about new patterns (like how to deal with [GDPR](https://railseventstore.org/docs/advanced-topics/gdpr)), experience, and still in some cases [it may be unnecessary](https://udidahan.com/2011/04/22/when-to-avoid-cqrs/).
+It’s true, that full implementation of Domain-Driven Design with [CQRS](https://udidahan.com/2009/12/09/clarified-cqrs/) and Event Sourcing is not simple. It requires knowledge, a lot of learning about new patterns (like how to deal with [GDPR](https://railseventstore.org/docs/advanced-topics/gdpr)), experience, and still in some cases [it may be unnecessary](https://udidahan.com/2011/04/22/when-to-avoid-cqrs/).
 
 Still, emitting events is so simple (at least with Rails Event Store) that it’s almost for free, and the benefits are so great that it’s really hard for me to find a reason to not do so. You can simply start with `event_store.publish(SomethingHappened)` and learn about all this complex stuff later, piece by piece, step by step at your own pace without sacrificing anything.
 
